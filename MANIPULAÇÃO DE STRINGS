@@ -1,0 +1,41 @@
+//Bibliotecas
+#include <stdio.h>
+#include <string.h>
+#include <iso646.h>
+
+int main()
+{
+//Declaração de variaveis
+	char nome[100];
+	int resp;
+	int cont,c=1,qnts;
+	
+//Entrada de dados
+    do
+	{
+		printf("INforme o seu nome[%i]: \n",c++);
+		scanf("%s",nome);
+
+    //Atribuição de função de contagem de strings
+	    qnts=strlen(nome);
+
+    //Exibindo resultado a cada looping
+	    printf("\nA quantidade de caracteres informado de  %s eh: %i\n ",nome,qnts);
+
+	    printf("Informe [1] para continuar ou [0] para sair: \n");
+	    scanf("%i",&resp);
+
+    //Looping de insistência 
+		while(resp!= 1 )
+		{
+			printf("\nInforme [1] para continuar ou [0N] para sair: \n");
+	        scanf("%i",&resp);
+
+      //Para o programa
+	        if(resp == 0)
+	        {
+	        	break;
+			}
+		}
+	}while(resp ==1);
+}
